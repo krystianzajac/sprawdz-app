@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprawdź — Voice-Based Sobriety Check</title>
+    <meta name="description" content="Sprawdź analyses your voice and reaction time to estimate alcohol impairment. Based on Stanford University research. Free, private, instant.">
+    <meta name="theme-color" content="#3373F2">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sprawdź — Are you sure you're sober?">
+    <meta property="og:description" content="Your voice changes when you drink. Sprawdź detects it in 30 seconds. Based on Stanford research.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sprawdz.app">
+    <meta property="og:image" content="https://sprawdz.app/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sprawdź — Voice-Based Sobriety Check">
+    <meta name="twitter:description" content="Your voice changes when you drink. Sprawdź detects it in 30 seconds.">
+
+    <!-- Favicon (inline SVG) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav" id="nav">
+        <div class="nav__inner container">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                        <line x1="12" y1="19" x2="12" y2="22"/>
+                    </svg>
+                </span>
+                <span data-pl="Sprawdź" data-en="Sprawdź">Sprawdź</span>
+            </a>
+            <div class="nav__actions">
+                <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                    <span class="lang-toggle__flag" id="langFlag">🇵🇱</span>
+                    <span class="lang-toggle__label" id="langLabel">PL</span>
+                </button>
+                <a href="#download" class="btn btn--sm btn--primary nav__cta"
+                   data-pl="Pobierz" data-en="Download">Pobierz</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO (StoryBrand: Open with the character's problem) ===== -->
+    <section class="hero" id="hero">
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <p class="hero__eyebrow"
+                   data-pl="Na podstawie badań Uniwersytetu Stanforda"
+                   data-en="Based on Stanford University research">
+                    Na podstawie badań Uniwersytetu Stanforda
+                </p>
+                <h1 class="hero__title"
+                    data-pl="Twój głos wie, ile wypiłeś."
+                    data-en="Your voice knows how much you've had.">
+                    Twój głos wie, ile wypiłeś.
+                </h1>
+                <p class="hero__subtitle"
+                   data-pl="Sprawdź analizuje Twoją mowę i czas reakcji, by w 30 sekund ocenić, czy alkohol wpływa na Twoje funkcje poznawcze."
+                   data-en="Sprawdź analyses your speech and reaction time to assess alcohol's impact on your cognitive functions in 30 seconds.">
+                    Sprawdź analizuje Twoją mowę i czas reakcji, by w 30 sekund ocenić, czy alkohol wpływa na Twoje funkcje poznawcze.
+                </p>
+                <div class="hero__ctas">
+                    <a href="#download" class="btn btn--primary btn--lg"
+                       data-pl="Pobierz za darmo" data-en="Download free">
+                        Pobierz za darmo
+                    </a>
+                    <a href="#how-it-works" class="btn btn--ghost btn--lg"
+                       data-pl="Jak to działa?" data-en="How does it work?">
+                        Jak to działa?
+                    </a>
+                </div>
+                <p class="hero__proof"
+                   data-pl="Darmowa • Prywatna • Bez reklam"
+                   data-en="Free • Private • No ads">
+                    Darmowa • Prywatna • Bez reklam
+                </p>
+            </div>
+            <div class="hero__phone">
+                <div class="phone-mockup">
+                    <div class="phone-mockup__notch"></div>
+                    <div class="phone-mockup__screen">
+                        <div class="phone-screen">
+                            <div class="phone-screen__icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3373F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                                    <line x1="12" y1="19" x2="12" y2="22"/>
+                                </svg>
+                            </div>
+                            <div class="phone-screen__title" data-pl="Sprawdź" data-en="Sprawdź">Sprawdź</div>
+                            <div class="phone-screen__subtitle"
+                                 data-pl="Wykrywanie wpływu alkoholu"
+                                 data-en="Voice-based sobriety check">
+                                Wykrywanie wpływu alkoholu
+                            </div>
+                            <div class="phone-screen__btn"
+                                 data-pl="Rozpocznij test"
+                                 data-en="Start Test">
+                                Rozpocznij test
+                            </div>
+                            <div class="phone-screen__gauge">
+                                <svg viewBox="0 0 120 70" class="gauge-svg">
+                                    <path d="M 10 65 A 50 50 0 0 1 110 65" fill="none" stroke="#EBEBED" stroke-width="8" stroke-linecap="round"/>
+                                    <path d="M 10 65 A 50 50 0 0 1 50 18" fill="none" stroke="#33C773" stroke-width="8" stroke-linecap="round" class="gauge-fill"/>
+                                </svg>
+                                <span class="gauge-label">24%</span>
+                            </div>
+                            <div class="phone-screen__result"
+                                 data-pl="Prawdopodobnie trzeźwy"
+                                 data-en="Likely Sober">
+                                Prawdopodobnie trzeźwy
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROBLEM (StoryBrand: Name the villain / Cialdini: create tension) ===== -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="problem__grid">
+                <div class="problem__card">
+                    <div class="problem__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F04545" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    </div>
+                    <h3 data-pl="&laquo;Wypiłem tylko dwa piwa&raquo;"
+                        data-en="&laquo;I only had two beers&raquo;">
+                        &laquo;Wypiłem tylko dwa piwa&raquo;
+                    </h3>
+                    <p data-pl="Każdy tak mówi. Ale 73% kierowców zatrzymanych z ponadnormatywnym stężeniem alkoholu uważało, że są trzeźwi."
+                       data-en="Everyone says that. But 73% of drivers stopped over the limit believed they were sober.">
+                        Każdy tak mówi. Ale 73% kierowców zatrzymanych z ponadnormatywnym stężeniem alkoholu uważało, że są trzeźwi.
+                    </p>
+                </div>
+                <div class="problem__card">
+                    <div class="problem__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FABF2E" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 data-pl="Twój mózg cię oszukuje"
+                        data-en="Your brain lies to you">
+                        Twój mózg cię oszukuje
+                    </h3>
+                    <p data-pl="Alkohol upośledza samoocenę jako pierwszy. Im więcej wypijesz, tym bardziej jesteś przekonany, że jesteś w porządku."
+                       data-en="Alcohol impairs self-assessment first. The more you drink, the more convinced you are that you're fine.">
+                        Alkohol upośledza samoocenę jako pierwszy. Im więcej wypijesz, tym bardziej jesteś przekonany, że jesteś w porządku.
+                    </p>
+                </div>
+                <div class="problem__card">
+                    <div class="problem__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3373F2" stroke-width="2" stroke-linecap="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <h3 data-pl="Potrzebujesz obiektywnej odpowiedzi"
+                        data-en="You need an objective answer">
+                        Potrzebujesz obiektywnej odpowiedzi
+                    </h3>
+                    <p data-pl="Nie alkomatu, którego nie masz. Nie opinii znajomych, którzy też pili. Potrzebujesz danych."
+                       data-en="Not a breathalyser you don't own. Not your friends' opinion — they've been drinking too. You need data.">
+                        Nie alkomatu, którego nie masz. Nie opinii znajomych, którzy też pili. Potrzebujesz danych.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GUIDE (StoryBrand: Position yourself as the guide / Cialdini: Authority) ===== -->
+    <section class="guide" id="science">
+        <div class="container guide__inner">
+            <div class="guide__badge"
+                 data-pl="Potwierdzone naukowo" data-en="Scientifically validated">
+                Potwierdzone naukowo
+            </div>
+            <h2 data-pl="Twój głos zmienia się, gdy pijesz. Nauka to udowodniła."
+                data-en="Your voice changes when you drink. Science proved it.">
+                Twój głos zmienia się, gdy pijesz. Nauka to udowodniła.
+            </h2>
+            <p class="guide__lead"
+               data-pl="Badacze z Uniwersytetu Stanforda wykazali w 2023 roku, że analiza mowy pozwala wykryć stan nietrzeźwości z dokładnością 98%. Sprawdź wykorzystuje tę samą technologię."
+               data-en="Stanford University researchers demonstrated in 2023 that speech analysis can detect intoxication with 98% accuracy. Sprawdź uses the same technology.">
+                Badacze z Uniwersytetu Stanforda wykazali w 2023 roku, że analiza mowy pozwala wykryć stan nietrzeźwości z dokładnością 98%. Sprawdź wykorzystuje tę samą technologię.
+            </p>
+            <div class="guide__stats">
+                <div class="stat">
+                    <span class="stat__number">98%</span>
+                    <span class="stat__label"
+                          data-pl="dokładność w badaniu" data-en="accuracy in study">
+                        dokładność w badaniu
+                    </span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">30s</span>
+                    <span class="stat__label"
+                          data-pl="czas testu" data-en="test duration">
+                        czas testu
+                    </span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">2</span>
+                    <span class="stat__label"
+                          data-pl="niezależne testy" data-en="independent tests">
+                        niezależne testy
+                    </span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">0</span>
+                    <span class="stat__label"
+                          data-pl="danych wysyłanych na serwer" data-en="data sent to servers">
+                        danych wysyłanych na serwer
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PLAN (StoryBrand: Give them a plan / Cialdini: Commitment — small steps) ===== -->
+    <section class="plan" id="how-it-works">
+        <div class="container">
+            <h2 data-pl="Jak to działa" data-en="How it works">
+                Jak to działa
+            </h2>
+            <p class="section-lead"
+               data-pl="Trzy proste kroki. Bez kont, bez rejestracji, bez danych osobowych."
+               data-en="Three simple steps. No accounts, no sign-up, no personal data.">
+                Trzy proste kroki. Bez kont, bez rejestracji, bez danych osobowych.
+            </p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step__number">1</div>
+                    <div class="step__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                    </div>
+                    <h3 data-pl="Przeczytaj łamaniec językowy"
+                        data-en="Read a tongue twister">
+                        Przeczytaj łamaniec językowy
+                    </h3>
+                    <p data-pl="Aplikacja wyświetla losowy łamaniec językowy. Przeczytaj go na głos — to stwarza &laquo;test obciążeniowy&raquo; dla Twojej mowy."
+                       data-en="The app shows a random tongue twister. Read it aloud — this creates a &laquo;stress test&raquo; for your speech.">
+                        Aplikacja wyświetla losowy łamaniec językowy. Przeczytaj go na głos — to stwarza &laquo;test obciążeniowy&raquo; dla Twojej mowy.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step__number">2</div>
+                    <div class="step__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 data-pl="Wykonaj test czasu reakcji"
+                        data-en="Take the reaction time test">
+                        Wykonaj test czasu reakcji
+                    </h3>
+                    <p data-pl="5 szybkich prób — reaguj na strzałki kierunkowe. Alkohol spowalnia reakcję i obniża dokładność."
+                       data-en="5 quick trials — respond to directional arrows. Alcohol slows reaction time and reduces accuracy.">
+                        5 szybkich prób — reaguj na strzałki kierunkowe. Alkohol spowalnia reakcję i obniża dokładność.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step__number">3</div>
+                    <div class="step__icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3 data-pl="Otrzymaj wynik"
+                        data-en="Get your result">
+                        Otrzymaj wynik
+                    </h3>
+                    <p data-pl="Wynik łączony z analizy głosu i czasu reakcji, z szacowanym poziomem alkoholu we krwi. Jasny werdykt: trzeźwy czy pod wpływem."
+                       data-en="A combined score from voice analysis and reaction time, with estimated BAC. Clear verdict: sober or impaired.">
+                        Wynik łączony z analizy głosu i czasu reakcji, z szacowanym poziomem alkoholu we krwi. Jasny werdykt: trzeźwy czy pod wpływem.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES (Cialdini: Social proof through capability) ===== -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 data-pl="Dlaczego Sprawdź" data-en="Why Sprawdź">
+                Dlaczego Sprawdź
+            </h2>
+            <div class="features__grid">
+                <div class="feature">
+                    <div class="feature__icon feature__icon--blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h4 data-pl="100% prywatna" data-en="100% private">100% prywatna</h4>
+                    <p data-pl="Nagrania głosowe są przetwarzane wyłącznie na Twoim telefonie. Nigdy nie opuszczają urządzenia."
+                       data-en="Voice recordings are processed entirely on your phone. They never leave your device.">
+                        Nagrania głosowe są przetwarzane wyłącznie na Twoim telefonie. Nigdy nie opuszczają urządzenia.
+                    </p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon feature__icon--green">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h4 data-pl="Kalibracja do Twojego głosu" data-en="Calibrated to your voice">Kalibracja do Twojego głosu</h4>
+                    <p data-pl="Nagraj 5 próbek na trzeźwo, a algorytm nauczy się Twoich indywidualnych wzorców mowy."
+                       data-en="Record 5 sober samples and the algorithm learns your individual speech patterns.">
+                        Nagraj 5 próbek na trzeźwo, a algorytm nauczy się Twoich indywidualnych wzorców mowy.
+                    </p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon feature__icon--purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    </div>
+                    <h4 data-pl="Podwójna weryfikacja" data-en="Dual verification">Podwójna weryfikacja</h4>
+                    <p data-pl="Analiza głosu + test czasu reakcji. Dwa niezależne wskaźniki dają pewniejszy wynik."
+                       data-en="Voice analysis + reaction time test. Two independent indicators give a more reliable result.">
+                        Analiza głosu + test czasu reakcji. Dwa niezależne wskaźniki dają pewniejszy wynik.
+                    </p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon feature__icon--orange">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                    </div>
+                    <h4 data-pl="Dwujęzyczna" data-en="Bilingual">Dwujęzyczna</h4>
+                    <p data-pl="Polski i angielski. Łamańce językowe w obu językach. Automatyczne wykrywanie języka urządzenia."
+                       data-en="Polish and English. Tongue twisters in both languages. Automatic device language detection.">
+                        Polski i angielski. Łamańce językowe w obu językach. Automatyczne wykrywanie języka urządzenia.
+                    </p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon feature__icon--red">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    </div>
+                    <h4 data-pl="Historia wyników" data-en="Test history">Historia wyników</h4>
+                    <p data-pl="Śledź swoje wyniki w czasie. Wykresy, średnie, najwyższe i najniższe odczyty."
+                       data-en="Track your results over time. Charts, averages, highest and lowest readings.">
+                        Śledź swoje wyniki w czasie. Wykresy, średnie, najwyższe i najniższe odczyty.
+                    </p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon feature__icon--teal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                    <h4 data-pl="Całkowicie darmowa" data-en="Completely free">Całkowicie darmowa</h4>
+                    <p data-pl="Bez subskrypcji, bez reklam, bez ukrytych kosztów. Twoje bezpieczeństwo nie powinno być premium."
+                       data-en="No subscriptions, no ads, no hidden costs. Your safety shouldn't be premium.">
+                        Bez subskrypcji, bez reklam, bez ukrytych kosztów. Twoje bezpieczeństwo nie powinno być premium.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SUCCESS / TRANSFORMATION (StoryBrand: Paint the success) ===== -->
+    <section class="transformation" id="transformation">
+        <div class="container transformation__inner">
+            <h2 data-pl="Wyobraź sobie" data-en="Imagine this">
+                Wyobraź sobie
+            </h2>
+            <div class="transformation__grid">
+                <div class="transformation__before">
+                    <h4 data-pl="Bez Sprawdź" data-en="Without Sprawdź">Bez Sprawdź</h4>
+                    <ul>
+                        <li data-pl="&laquo;Chyba jestem w porządku...&raquo;"
+                            data-en="&laquo;I think I'm probably fine...&raquo;">
+                            &laquo;Chyba jestem w porządku...&raquo;
+                        </li>
+                        <li data-pl="Pytasz znajomych, którzy też pili"
+                            data-en="You ask friends who've also been drinking">
+                            Pytasz znajomych, którzy też pili
+                        </li>
+                        <li data-pl="Podejmujesz decyzję na podstawie przeczucia"
+                            data-en="You make decisions based on gut feeling">
+                            Podejmujesz decyzję na podstawie przeczucia
+                        </li>
+                        <li data-pl="Budzisz się z niepokojem"
+                            data-en="You wake up with anxiety">
+                            Budzisz się z niepokojem
+                        </li>
+                    </ul>
+                </div>
+                <div class="transformation__after">
+                    <h4 data-pl="Ze Sprawdź" data-en="With Sprawdź">Ze Sprawdź</h4>
+                    <ul>
+                        <li data-pl="30 sekund — obiektywna odpowiedź"
+                            data-en="30 seconds — an objective answer">
+                            30 sekund — obiektywna odpowiedź
+                        </li>
+                        <li data-pl="Twarde dane, nie domysły"
+                            data-en="Hard data, not guesswork">
+                            Twarde dane, nie domysły
+                        </li>
+                        <li data-pl="Świadoma decyzja: taksówka czy klucze"
+                            data-en="An informed decision: taxi or keys">
+                            Świadoma decyzja: taksówka czy klucze
+                        </li>
+                        <li data-pl="Spokój umysłu"
+                            data-en="Peace of mind">
+                            Spokój umysłu
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA / DOWNLOAD (StoryBrand: Call to Action / Cialdini: Reciprocity — it's free) ===== -->
+    <section class="download" id="download">
+        <div class="container download__inner">
+            <h2 data-pl="Sprawdź sam" data-en="Check for yourself">
+                Sprawdź sam
+            </h2>
+            <p class="download__lead"
+               data-pl="Darmowa. Prywatna. Gotowa w 30 sekund. Jedyna aplikacja w Polsce, która analizuje Twój głos i czas reakcji, by ocenić wpływ alkoholu."
+               data-en="Free. Private. Ready in 30 seconds. The only app in Poland that analyses your voice and reaction time to assess alcohol's impact.">
+                Darmowa. Prywatna. Gotowa w 30 sekund. Jedyna aplikacja w Polsce, która analizuje Twój głos i czas reakcji, by ocenić wpływ alkoholu.
+            </p>
+            <div class="download__buttons">
+                <!-- App Store badge placeholder — replace with real link when available -->
+                <a href="#" class="app-store-badge" aria-label="Download on the App Store">
+                    <div class="app-store-badge__inner">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="white">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                        </svg>
+                        <div>
+                            <span class="app-store-badge__small"
+                                  data-pl="Wkrótce na" data-en="Coming soon to">Wkrótce na</span>
+                            <span class="app-store-badge__big">App Store</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <p class="download__note"
+               data-pl="iOS 17+ • iPhone • Bez rejestracji"
+               data-en="iOS 17+ • iPhone • No sign-up required">
+                iOS 17+ • iPhone • Bez rejestracji
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== FAILURE (StoryBrand: What's at stake — light touch) ===== -->
+    <section class="stakes">
+        <div class="container stakes__inner">
+            <div class="stakes__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#F04545" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+            </div>
+            <h3 data-pl="Ważne przypomnienie"
+                data-en="Important reminder">
+                Ważne przypomnienie
+            </h3>
+            <p data-pl="Sprawdź nie jest urządzeniem medycznym ani alkomatem. Wyniki mają charakter informacyjny i rozrywkowy. Nigdy nie prowadź po alkoholu — niezależnie od tego, co pokaże jakakolwiek aplikacja. Jedyna bezpieczna opcja po wypiciu to taksówka, Uber lub wyznaczony kierowca."
+               data-en="Sprawdź is not a medical device or breathalyser. Results are informational and for entertainment purposes. Never drive after drinking — regardless of what any app shows. The only safe option after drinking is a taxi, Uber, or a designated driver.">
+                Sprawdź nie jest urządzeniem medycznym ani alkomatem. Wyniki mają charakter informacyjny i rozrywkowy. Nigdy nie prowadź po alkoholu — niezależnie od tego, co pokaże jakakolwiek aplikacja. Jedyna bezpieczna opcja po wypiciu to taksówka, Uber lub wyznaczony kierowca.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="footer__logo">Sprawdź</span>
+                <p data-pl="Wykrywanie wpływu alkoholu na podstawie głosu i czasu reakcji."
+                   data-en="Voice and reaction-time based alcohol impairment detection.">
+                    Wykrywanie wpływu alkoholu na podstawie głosu i czasu reakcji.
+                </p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__col">
+                    <h5 data-pl="Informacje" data-en="Information">Informacje</h5>
+                    <a href="#science" data-pl="Nauka" data-en="Science">Nauka</a>
+                    <a href="#how-it-works" data-pl="Jak to działa" data-en="How it works">Jak to działa</a>
+                    <a href="#features" data-pl="Funkcje" data-en="Features">Funkcje</a>
+                </div>
+                <div class="footer__col">
+                    <h5 data-pl="Prawne" data-en="Legal">Prawne</h5>
+                    <a href="#" data-pl="Polityka prywatności" data-en="Privacy Policy">Polityka prywatności</a>
+                    <a href="#" data-pl="Regulamin" data-en="Terms of Service">Regulamin</a>
+                </div>
+                <div class="footer__col">
+                    <h5 data-pl="Kontakt" data-en="Contact">Kontakt</h5>
+                    <a href="mailto:hello@sprawdz.app">hello@sprawdz.app</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Sprawdź. <span data-pl="Wszystkie prawa zastrzeżone." data-en="All rights reserved.">Wszystkie prawa zastrzeżone.</span></p>
+                <p class="footer__research"
+                   data-pl="Na podstawie: Suffoletto et al., &laquo;Detecting alcohol intoxication from voice&raquo;, Stanford University, 2023."
+                   data-en="Based on: Suffoletto et al., &laquo;Detecting alcohol intoxication from voice&raquo;, Stanford University, 2023.">
+                    Na podstawie: Suffoletto et al., &laquo;Detecting alcohol intoxication from voice&raquo;, Stanford University, 2023.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
