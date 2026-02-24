@@ -15,9 +15,10 @@
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved === 'pl' || saved === 'en') return saved;
 
-        // Auto-detect from browser
+        // Default to Polish (Polish domain sprawdz.app).
+        // Only switch to English if browser language is explicitly English.
         const browserLang = navigator.language || navigator.userLanguage || '';
-        return browserLang.startsWith('pl') ? 'pl' : 'en';
+        return browserLang.startsWith('en') ? 'en' : 'pl';
     }
 
     function applyLanguage(lang) {
@@ -47,8 +48,8 @@
         var metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
             metaDesc.content = lang === 'pl'
-                ? 'Sprawdź analizuje Twój głos i czas reakcji, by oszacować wpływ alkoholu. Na podstawie badań Uniwersytetu Stanforda. Darmowa, prywatna, natychmiastowa.'
-                : 'Sprawdź analyses your voice and reaction time to estimate alcohol impairment. Based on Stanford University research. Free, private, instant.';
+                ? 'Sprawdź analizuje Twój głos i czas reakcji, by oszacować wpływ alkoholu. Inspirowane badaniami naukowymi. Darmowa, prywatna, natychmiastowa.'
+                : 'Sprawdź analyses your voice and reaction time to estimate alcohol impairment. Inspired by peer-reviewed research. Free, private, instant.';
         }
     }
 
