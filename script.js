@@ -51,6 +51,24 @@
                 ? 'Sprawdź analizuje Twój głos i czas reakcji, by oszacować wpływ alkoholu. Inspirowane badaniami naukowymi. Darmowa, prywatna, natychmiastowa.'
                 : 'Sprawdź analyses your voice and reaction time to estimate alcohol impairment. Inspired by peer-reviewed research. Free, private, instant.';
         }
+
+        // Update OG and Twitter meta for social sharing
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        var ogDesc = document.querySelector('meta[property="og:description"]');
+        var twTitle = document.querySelector('meta[name="twitter:title"]');
+        var twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (ogTitle) ogTitle.content = lang === 'pl'
+            ? 'Sprawdź — Czy na pewno jesteś trzeźwy?'
+            : 'Sprawdź — Are you sure you\'re sober?';
+        if (ogDesc) ogDesc.content = lang === 'pl'
+            ? 'Twój głos zmienia się, gdy pijesz. Sprawdź wykrywa to w 30 sekund. Inspirowane badaniami naukowymi.'
+            : 'Your voice changes when you drink. Sprawdź detects it in 30 seconds. Inspired by peer-reviewed research.';
+        if (twTitle) twTitle.content = lang === 'pl'
+            ? 'Sprawdź — Wykrywanie wpływu alkoholu'
+            : 'Sprawdź — Voice-Based Sobriety Check';
+        if (twDesc) twDesc.content = lang === 'pl'
+            ? 'Twój głos zmienia się, gdy pijesz. Sprawdź wykrywa to w 30 sekund.'
+            : 'Your voice changes when you drink. Sprawdź detects it in 30 seconds.';
     }
 
     // Toggle handler

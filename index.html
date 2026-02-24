@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprawdź — Voice-Based Sobriety Check</title>
-    <meta name="description" content="Sprawdź analyses your voice and reaction time to estimate alcohol impairment. Inspired by peer-reviewed research. Free, private, instant.">
+    <title>Sprawdź — Wykrywanie wpływu alkoholu na podstawie głosu</title>
+    <meta name="description" content="Sprawdź analizuje Twój głos i czas reakcji, by oszacować wpływ alkoholu. Inspirowane badaniami naukowymi. Darmowa, prywatna, natychmiastowa.">
     <meta name="theme-color" content="#3373F2">
 
+    <!-- SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sprawdź">
+    <meta name="keywords" content="alkohol, trzeźwość, analiza głosu, czas reakcji, alkomat, aplikacja, sprawdź, sobriety, voice analysis, BAC">
+    <link rel="canonical" href="https://sprawdz.app/">
+    <link rel="alternate" hreflang="pl" href="https://sprawdz.app/">
+    <link rel="alternate" hreflang="en" href="https://sprawdz.app/">
+    <link rel="alternate" hreflang="x-default" href="https://sprawdz.app/">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Sprawdź — Are you sure you're sober?">
-    <meta property="og:description" content="Your voice changes when you drink. Sprawdź detects it in 30 seconds. Inspired by peer-reviewed research.">
+    <meta property="og:title" content="Sprawdź — Czy na pewno jesteś trzeźwy?">
+    <meta property="og:description" content="Twój głos zmienia się, gdy pijesz. Sprawdź wykrywa to w 30 sekund. Inspirowane badaniami naukowymi.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sprawdz.app">
     <meta property="og:image" content="https://sprawdz.app/og-image.png">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:site_name" content="Sprawdź">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sprawdź — Voice-Based Sobriety Check">
-    <meta name="twitter:description" content="Your voice changes when you drink. Sprawdź detects it in 30 seconds.">
+    <meta name="twitter:title" content="Sprawdź — Wykrywanie wpływu alkoholu">
+    <meta name="twitter:description" content="Twój głos zmienia się, gdy pijesz. Sprawdź wykrywa to w 30 sekund.">
 
     <!-- Favicon (inline SVG) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+
+    <!-- Security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,11 +47,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Sprawdź",
+        "operatingSystem": "iOS",
+        "applicationCategory": "HealthApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "PLN"
+        },
+        "description": "Aplikacja analizująca głos i czas reakcji w celu oszacowania wpływu alkoholu.",
+        "url": "https://sprawdz.app",
+        "inLanguage": ["pl", "en"]
+    }
+    </script>
 </head>
 <body>
 
     <!-- ===== NAV ===== -->
-    <nav class="nav" id="nav">
+    <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
         <div class="nav__inner container">
             <a href="#" class="nav__logo">
                 <span class="nav__logo-icon">
@@ -472,7 +510,7 @@
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container footer__inner">
             <div class="footer__brand">
                 <span class="footer__logo">Sprawdź</span>

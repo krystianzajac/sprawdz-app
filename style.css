@@ -433,6 +433,11 @@ h5 {
 @media (max-width: 640px) {
     .hero { padding-top: calc(64px + var(--space-xl)); padding-bottom: var(--space-xl); }
     .hero__eyebrow { font-size: 0.78rem; }
+    .hero__ctas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero__ctas .btn { text-align: center; }
     .phone-mockup { width: 200px; border-radius: 28px; padding: 8px; }
     .phone-mockup__screen { border-radius: 22px; }
     .phone-screen {
@@ -815,6 +820,12 @@ h5 {
     font-size: 0.85rem;
 }
 
+@media (max-width: 640px) {
+    .download { padding: var(--space-xxl) 0; }
+    .download__lead { font-size: 1rem; }
+    .app-store-badge__inner { padding: 10px 20px; }
+}
+
 /* === STAKES / DISCLAIMER === */
 .stakes {
     padding: var(--space-xxl) 0;
@@ -857,7 +868,7 @@ h5 {
 .footer__inner {
     display: grid;
     grid-template-columns: 1.5fr repeat(3, 1fr);
-    gap: var(--space-xl);
+    gap: var(--space-xxl) var(--space-xl);
 }
 
 .footer__logo {
@@ -873,24 +884,29 @@ h5 {
     max-width: 280px;
 }
 
+.footer__links {
+    display: contents;
+}
+
+.footer__col h5 {
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: var(--space-md);
+}
+
 .footer__col a {
     display: block;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
-    padding: var(--space-xxs) 0;
+    padding: var(--space-xs) 0;
     transition: color 0.2s;
 }
 .footer__col a:hover { color: white; }
-
-.footer__col h5 {
-    color: rgba(255, 255, 255, 0.4);
-}
 
 .footer__bottom {
     grid-column: 1 / -1;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: var(--space-lg);
-    margin-top: var(--space-lg);
+    margin-top: var(--space-sm);
     font-size: 0.8rem;
 }
 
@@ -912,7 +928,9 @@ h5 {
 @media (max-width: 640px) {
     .footer__inner {
         grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
+    .footer__col { margin-bottom: var(--space-xs); }
 }
 
 /* === ANIMATIONS === */
