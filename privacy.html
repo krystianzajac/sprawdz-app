@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka prywatności — Alkosprawdzacz</title>
+    <meta name="description" content="Polityka prywatności aplikacji Alkosprawdzacz. Dowiedz się, jakie dane zbieramy i jak je chronimy.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://alkosprawdza.cz/privacy.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎙️</text></svg>">
+
+    <!-- Security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy {
+            padding: var(--space-xxxl) 0;
+            min-height: 100vh;
+        }
+        .privacy__header {
+            margin-bottom: var(--space-xxl);
+        }
+        .privacy__header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+        .privacy__header p {
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+        }
+        .privacy__content h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-sm);
+        }
+        .privacy__content p,
+        .privacy__content li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-sm);
+        }
+        .privacy__content ul {
+            list-style: disc;
+            padding-left: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+        .privacy__content li {
+            margin-bottom: var(--space-xs);
+        }
+        .privacy__back {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: var(--space-xl);
+        }
+        .privacy__back:hover {
+            text-decoration: underline;
+        }
+        .privacy__lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-md);
+            border: 1px solid var(--divider);
+            border-radius: var(--radius-pill);
+            background: var(--surface);
+            cursor: pointer;
+            font-family: var(--font);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            float: right;
+            margin-top: var(--space-xs);
+        }
+        .privacy__lang-toggle:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="privacy">
+        <div class="container">
+            <a href="/" class="privacy__back">&larr; <span data-pl="Powrót do strony głównej" data-en="Back to homepage">Powrót do strony głównej</span></a>
+            <button class="privacy__lang-toggle" id="langToggle">
+                <span id="langFlag">🇵🇱</span>
+                <span id="langLabel">PL</span>
+            </button>
+
+            <div class="privacy__header">
+                <h1 data-pl="Polityka prywatności" data-en="Privacy Policy">Polityka prywatności</h1>
+                <p data-pl="Ostatnia aktualizacja: 24 lutego 2026" data-en="Last updated: 24 February 2026">Ostatnia aktualizacja: 24 lutego 2026</p>
+            </div>
+
+            <div class="privacy__content">
+
+                <!-- Section 1 -->
+                <h2 data-pl="1. Informacje ogólne" data-en="1. Overview">1. Informacje ogólne</h2>
+                <p data-pl="Alkosprawdzacz (&bdquo;Aplikacja&rdquo;) to aplikacja mobilna na iOS, która analizuje głos i czas reakcji użytkownika w celu orientacyjnej oceny wpływu alkoholu. Aplikacja została zaprojektowana z myślą o prywatności &mdash; Twoje dane pozostają na Twoim urządzeniu."
+                   data-en="Alkosprawdzacz (&ldquo;the App&rdquo;) is an iOS mobile application that analyses the user&rsquo;s voice and reaction time to provide an indicative assessment of alcohol&rsquo;s effects. The App is designed with privacy in mind &mdash; your data stays on your device.">
+                    Alkosprawdzacz (&bdquo;Aplikacja&rdquo;) to aplikacja mobilna na iOS, która analizuje głos i czas reakcji użytkownika w celu orientacyjnej oceny wpływu alkoholu. Aplikacja została zaprojektowana z myślą o prywatności &mdash; Twoje dane pozostają na Twoim urządzeniu.
+                </p>
+
+                <!-- Section 2 -->
+                <h2 data-pl="2. Jakie dane zbieramy" data-en="2. What data we collect">2. Jakie dane zbieramy</h2>
+
+                <p data-pl="<strong>Dane przetwarzane wyłącznie na urządzeniu (nigdy nie opuszczają Twojego telefonu):</strong>"
+                   data-en="<strong>Data processed only on-device (never leaves your phone):</strong>">
+                    <strong>Dane przetwarzane wyłącznie na urządzeniu (nigdy nie opuszczają Twojego telefonu):</strong>
+                </p>
+                <ul>
+                    <li data-pl="Nagrania głosowe &mdash; przetwarzane w czasie rzeczywistym i natychmiast usuwane po analizie"
+                        data-en="Voice recordings &mdash; processed in real time and immediately deleted after analysis">
+                        Nagrania głosowe &mdash; przetwarzane w czasie rzeczywistym i natychmiast usuwane po analizie
+                    </li>
+                    <li data-pl="Dane profilu (imię, wiek, płeć, waga, wzrost) &mdash; przechowywane lokalnie w celu kalibracji algorytmu"
+                        data-en="Profile data (name, age, sex, weight, height) &mdash; stored locally for algorithm calibration">
+                        Dane profilu (imię, wiek, płeć, waga, wzrost) &mdash; przechowywane lokalnie w celu kalibracji algorytmu
+                    </li>
+                    <li data-pl="Próbki kalibracyjne &mdash; cechy akustyczne (nie surowe nagrania) przechowywane lokalnie"
+                        data-en="Calibration samples &mdash; acoustic features (not raw recordings) stored locally">
+                        Próbki kalibracyjne &mdash; cechy akustyczne (nie surowe nagrania) przechowywane lokalnie
+                    </li>
+                    <li data-pl="Historia wyników testów &mdash; przechowywana lokalnie na urządzeniu"
+                        data-en="Test result history &mdash; stored locally on device">
+                        Historia wyników testów &mdash; przechowywana lokalnie na urządzeniu
+                    </li>
+                    <li data-pl="Wyniki czasu reakcji &mdash; przetwarzane i przechowywane lokalnie"
+                        data-en="Reaction time results &mdash; processed and stored locally">
+                        Wyniki czasu reakcji &mdash; przetwarzane i przechowywane lokalnie
+                    </li>
+                </ul>
+
+                <p data-pl="<strong>Opcjonalna anonimowa telemetria (wymaga Twojej zgody):</strong>"
+                   data-en="<strong>Optional anonymous telemetry (requires your consent):</strong>">
+                    <strong>Opcjonalna anonimowa telemetria (wymaga Twojej zgody):</strong>
+                </p>
+                <ul>
+                    <li data-pl="Zanonimizowany identyfikator urządzenia (hash SHA-256, nie IDFV)"
+                        data-en="Anonymised device identifier (SHA-256 hash, not IDFV)">
+                        Zanonimizowany identyfikator urządzenia (hash SHA-256, nie IDFV)
+                    </li>
+                    <li data-pl="Wyniki testów (bez danych osobowych, nagrań ani tekstu łamańca)"
+                        data-en="Test scores (no personal data, recordings, or tongue twister text)">
+                        Wyniki testów (bez danych osobowych, nagrań ani tekstu łamańca)
+                    </li>
+                    <li data-pl="Wersja aplikacji i język"
+                        data-en="App version and language">
+                        Wersja aplikacji i język
+                    </li>
+                </ul>
+                <p data-pl="Telemetria jest domyślnie wyłączona. Możesz ją włączyć lub wyłączyć w dowolnym momencie."
+                   data-en="Telemetry is off by default. You can enable or disable it at any time.">
+                    Telemetria jest domyślnie wyłączona. Możesz ją włączyć lub wyłączyć w dowolnym momencie.
+                </p>
+
+                <!-- Section 3 -->
+                <h2 data-pl="3. Czego NIE zbieramy" data-en="3. What we do NOT collect">3. Czego NIE zbieramy</h2>
+                <ul>
+                    <li data-pl="Nie zbieramy surowych nagrań głosowych"
+                        data-en="We do not collect raw voice recordings">
+                        Nie zbieramy surowych nagrań głosowych
+                    </li>
+                    <li data-pl="Nie zbieramy danych osobowych (imię, data urodzenia, waga itp.)"
+                        data-en="We do not collect personal data (name, date of birth, weight, etc.)">
+                        Nie zbieramy danych osobowych (imię, data urodzenia, waga itp.)
+                    </li>
+                    <li data-pl="Nie śledzimy Twojej lokalizacji"
+                        data-en="We do not track your location">
+                        Nie śledzimy Twojej lokalizacji
+                    </li>
+                    <li data-pl="Nie wyświetlamy reklam ani nie udostępniamy danych reklamodawcom"
+                        data-en="We do not show ads or share data with advertisers">
+                        Nie wyświetlamy reklam ani nie udostępniamy danych reklamodawcom
+                    </li>
+                    <li data-pl="Nie korzystamy z narzędzi śledzenia zewnętrznych firm"
+                        data-en="We do not use third-party tracking tools">
+                        Nie korzystamy z narzędzi śledzenia zewnętrznych firm
+                    </li>
+                </ul>
+
+                <!-- Section 4 -->
+                <h2 data-pl="4. Uprawnienia urządzenia" data-en="4. Device permissions">4. Uprawnienia urządzenia</h2>
+                <p data-pl="Aplikacja wymaga dostępu do mikrofonu wyłącznie w celu nagrania próbki głosowej do analizy. Nagrania nie są przechowywane po zakończeniu analizy. Żadne inne uprawnienia (aparat, lokalizacja, kontakty itp.) nie są wymagane."
+                   data-en="The App requires microphone access solely to record a voice sample for analysis. Recordings are not stored after analysis is complete. No other permissions (camera, location, contacts, etc.) are required.">
+                    Aplikacja wymaga dostępu do mikrofonu wyłącznie w celu nagrania próbki głosowej do analizy. Nagrania nie są przechowywane po zakończeniu analizy. Żadne inne uprawnienia (aparat, lokalizacja, kontakty itp.) nie są wymagane.
+                </p>
+
+                <!-- Section 5 -->
+                <h2 data-pl="5. Przechowywanie danych" data-en="5. Data storage">5. Przechowywanie danych</h2>
+                <p data-pl="Wszystkie dane profilu i historia wyników są przechowywane wyłącznie na Twoim urządzeniu w formacie JSON w piaskownicy aplikacji. Dane te nie są synchronizowane z żadnym serwerem ani usługą chmurową. Odinstalowanie aplikacji trwale usuwa wszystkie dane."
+                   data-en="All profile data and test history are stored exclusively on your device in JSON format within the app&rsquo;s sandbox. This data is not synced with any server or cloud service. Uninstalling the app permanently deletes all data.">
+                    Wszystkie dane profilu i historia wyników są przechowywane wyłącznie na Twoim urządzeniu w formacie JSON w piaskownicy aplikacji. Dane te nie są synchronizowane z żadnym serwerem ani usługą chmurową. Odinstalowanie aplikacji trwale usuwa wszystkie dane.
+                </p>
+
+                <!-- Section 6 -->
+                <h2 data-pl="6. Usługi zewnętrzne" data-en="6. Third-party services">6. Usługi zewnętrzne</h2>
+                <p data-pl="Aplikacja nie korzysta z żadnych zewnętrznych SDK ani usług analitycznych. Jedynym opcjonalnym połączeniem sieciowym jest anonimowa telemetria (jeśli została włączona przez użytkownika), przesyłana do naszego serwera przez szyfrowane połączenie HTTPS."
+                   data-en="The App does not use any third-party SDKs or analytics services. The only optional network connection is anonymous telemetry (if enabled by the user), transmitted to our server over an encrypted HTTPS connection.">
+                    Aplikacja nie korzysta z żadnych zewnętrznych SDK ani usług analitycznych. Jedynym opcjonalnym połączeniem sieciowym jest anonimowa telemetria (jeśli została włączona przez użytkownika), przesyłana do naszego serwera przez szyfrowane połączenie HTTPS.
+                </p>
+
+                <!-- Section 7 -->
+                <h2 data-pl="7. Dzieci" data-en="7. Children">7. Dzieci</h2>
+                <p data-pl="Aplikacja nie jest przeznaczona dla osób poniżej 17. roku życia. Nie zbieramy świadomie danych od dzieci."
+                   data-en="The App is not intended for persons under 17 years of age. We do not knowingly collect data from children.">
+                    Aplikacja nie jest przeznaczona dla osób poniżej 17. roku życia. Nie zbieramy świadomie danych od dzieci.
+                </p>
+
+                <!-- Section 8 -->
+                <h2 data-pl="8. Zastrzeżenie medyczne" data-en="8. Medical disclaimer">8. Zastrzeżenie medyczne</h2>
+                <p data-pl="Alkosprawdzacz nie jest urządzeniem medycznym, alkomatem ani narzędziem diagnostycznym. Wyniki mają charakter wyłącznie orientacyjny i rozrywkowy. Aplikacja nie mierzy stężenia alkoholu we krwi (BAC) &mdash; podawane wartości to szacunki obliczane na podstawie analizy akustycznej i nie powinny być wykorzystywane do podejmowania decyzji dotyczących prowadzenia pojazdów ani zdrowia. Nigdy nie prowadź po spożyciu alkoholu."
+                   data-en="Alkosprawdzacz is not a medical device, breathalyser, or diagnostic tool. Results are for indicative and entertainment purposes only. The App does not measure blood alcohol concentration (BAC) &mdash; displayed values are estimates calculated from acoustic analysis and should not be used to make driving or health decisions. Never drive after consuming alcohol.">
+                    Alkosprawdzacz nie jest urządzeniem medycznym, alkomatem ani narzędziem diagnostycznym. Wyniki mają charakter wyłącznie orientacyjny i rozrywkowy. Aplikacja nie mierzy stężenia alkoholu we krwi (BAC) &mdash; podawane wartości to szacunki obliczane na podstawie analizy akustycznej i nie powinny być wykorzystywane do podejmowania decyzji dotyczących prowadzenia pojazdów ani zdrowia. Nigdy nie prowadź po spożyciu alkoholu.
+                </p>
+
+                <!-- Section 9 -->
+                <h2 data-pl="9. Zmiany w polityce" data-en="9. Changes to this policy">9. Zmiany w polityce</h2>
+                <p data-pl="Możemy aktualizować tę politykę prywatności. Istotne zmiany będą ogłaszane poprzez aktualizację aplikacji. Data ostatniej aktualizacji jest widoczna na górze tej strony."
+                   data-en="We may update this privacy policy. Significant changes will be announced via app updates. The last update date is visible at the top of this page.">
+                    Możemy aktualizować tę politykę prywatności. Istotne zmiany będą ogłaszane poprzez aktualizację aplikacji. Data ostatniej aktualizacji jest widoczna na górze tej strony.
+                </p>
+
+                <!-- Section 10 -->
+                <h2 data-pl="10. Kontakt" data-en="10. Contact">10. Kontakt</h2>
+                <p data-pl="Jeśli masz pytania dotyczące prywatności, skontaktuj się z nami:"
+                   data-en="If you have questions about privacy, contact us:">
+                    Jeśli masz pytania dotyczące prywatności, skontaktuj się z nami:
+                </p>
+                <p><a href="mailto:hello@alkosprawdza.cz" style="color: var(--primary); font-weight: 600;">hello@alkosprawdza.cz</a></p>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function () {
+        'use strict';
+        const STORAGE_KEY = 'sprawdz_lang';
+        let currentLang = localStorage.getItem(STORAGE_KEY);
+        if (currentLang !== 'pl' && currentLang !== 'en') {
+            const browserLang = navigator.language || navigator.userLanguage || '';
+            currentLang = browserLang.startsWith('en') ? 'en' : 'pl';
+        }
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem(STORAGE_KEY, lang);
+            document.documentElement.lang = lang;
+
+            document.querySelectorAll('[data-pl][data-en]').forEach(function (el) {
+                el.innerHTML = el.getAttribute('data-' + lang);
+            });
+
+            document.title = lang === 'pl'
+                ? 'Polityka prywatności — Alkosprawdzacz'
+                : 'Privacy Policy — Alkosprawdzacz';
+
+            var flag = document.getElementById('langFlag');
+            var label = document.getElementById('langLabel');
+            if (flag) flag.textContent = lang === 'pl' ? '🇵🇱' : '🇬🇧';
+            if (label) label.textContent = lang === 'pl' ? 'PL' : 'EN';
+        }
+
+        var toggleBtn = document.getElementById('langToggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', function () {
+                applyLanguage(currentLang === 'pl' ? 'en' : 'pl');
+            });
+        }
+
+        applyLanguage(currentLang);
+    })();
+    </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 // =============================================
-// Sprawdź.app — Language Toggle & Interactions
+// Alkosprawdzacz — Language Toggle & Interactions
 // =============================================
 
 (function () {
@@ -15,7 +15,7 @@
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved === 'pl' || saved === 'en') return saved;
 
-        // Default to Polish (Polish domain sprawdz.app).
+        // Default to Polish (Polish domain alkosprawdza.cz).
         // Only switch to English if browser language is explicitly English.
         const browserLang = navigator.language || navigator.userLanguage || '';
         return browserLang.startsWith('en') ? 'en' : 'pl';
@@ -41,15 +41,15 @@
 
         // Update page title
         document.title = lang === 'pl'
-            ? 'Sprawdź — Wykrywanie wpływu alkoholu na podstawie głosu'
-            : 'Sprawdź — Voice-Based Sobriety Check';
+            ? 'Alkosprawdzacz — Wykrywanie wpływu alkoholu na podstawie głosu'
+            : 'Alkosprawdzacz — Voice-Based Sobriety Check';
 
         // Update meta description
         var metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
             metaDesc.content = lang === 'pl'
-                ? 'Sprawdź analizuje Twój głos i czas reakcji, by oszacować wpływ alkoholu. Inspirowane badaniami naukowymi. Darmowa, prywatna, natychmiastowa.'
-                : 'Sprawdź analyses your voice and reaction time to estimate alcohol impairment. Inspired by peer-reviewed research. Free, private, instant.';
+                ? 'Alkosprawdzacz analizuje Twój głos i czas reakcji, by dać Ci orientacyjną ocenę wpływu alkoholu. Inspirowane badaniami naukowymi. Darmowa, prywatna, natychmiastowa.'
+                : 'Alkosprawdzacz analyses your voice and reaction time to give you an indicative assessment of alcohol\'s effects. Inspired by peer-reviewed research. Free, private, instant.';
         }
 
         // Update OG and Twitter meta for social sharing
@@ -58,17 +58,17 @@
         var twTitle = document.querySelector('meta[name="twitter:title"]');
         var twDesc = document.querySelector('meta[name="twitter:description"]');
         if (ogTitle) ogTitle.content = lang === 'pl'
-            ? 'Sprawdź — Czy na pewno jesteś trzeźwy?'
-            : 'Sprawdź — Are you sure you\'re sober?';
+            ? 'Alkosprawdzacz — Czy na pewno jesteś trzeźwy?'
+            : 'Alkosprawdzacz — Are you sure you\'re sober?';
         if (ogDesc) ogDesc.content = lang === 'pl'
-            ? 'Twój głos zmienia się, gdy pijesz. Sprawdź wykrywa to w 30 sekund. Inspirowane badaniami naukowymi.'
-            : 'Your voice changes when you drink. Sprawdź detects it in 30 seconds. Inspired by peer-reviewed research.';
+            ? 'Twój głos zmienia się, gdy pijesz. Alkosprawdzacz daje orientacyjną ocenę w 30 sekund. Inspirowane badaniami naukowymi.'
+            : 'Your voice changes when you drink. Alkosprawdzacz gives an indicative assessment in 30 seconds. Inspired by peer-reviewed research.';
         if (twTitle) twTitle.content = lang === 'pl'
-            ? 'Sprawdź — Wykrywanie wpływu alkoholu'
-            : 'Sprawdź — Voice-Based Sobriety Check';
+            ? 'Alkosprawdzacz — Wykrywanie wpływu alkoholu'
+            : 'Alkosprawdzacz — Voice-Based Sobriety Check';
         if (twDesc) twDesc.content = lang === 'pl'
-            ? 'Twój głos zmienia się, gdy pijesz. Sprawdź wykrywa to w 30 sekund.'
-            : 'Your voice changes when you drink. Sprawdź detects it in 30 seconds.';
+            ? 'Twój głos zmienia się, gdy pijesz. Alkosprawdzacz to wykrywa w 30 sekund.'
+            : 'Your voice changes when you drink. Alkosprawdzacz detects it in 30 seconds.';
     }
 
     // Toggle handler
