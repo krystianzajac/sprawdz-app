@@ -312,7 +312,7 @@ h5 {
 
 /* Phone Mockup */
 .phone-mockup {
-    width: 280px;
+    width: 240px;
     margin: 0 auto;
     background: #1A1A2E;
     border-radius: 40px;
@@ -342,9 +342,9 @@ h5 {
 }
 
 .phone-screen {
-    padding: 40px 24px 32px;
+    padding: 40px 20px 32px;
     text-align: center;
-    min-height: 420px;
+    min-height: 460px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -418,14 +418,15 @@ h5 {
     .hero__proof { text-align: center; }
     .hero__phone { order: -1; }
     .phone-mockup {
-        width: 240px;
+        width: 220px;
         border-radius: 34px;
+        padding: 10px;
     }
     .phone-mockup__notch { width: 100px; height: 24px; border-radius: 0 0 14px 14px; }
-    .phone-mockup__screen { border-radius: 24px; }
+    .phone-mockup__screen { border-radius: 26px; }
     .phone-screen {
-        padding: 32px 20px 24px;
-        min-height: 360px;
+        padding: 32px 16px 24px;
+        min-height: 400px;
     }
     .phone-screen__title { font-size: 24px; }
 }
@@ -438,11 +439,11 @@ h5 {
         align-items: stretch;
     }
     .hero__ctas .btn { text-align: center; }
-    .phone-mockup { width: 200px; border-radius: 28px; padding: 8px; }
+    .phone-mockup { width: 180px; border-radius: 28px; padding: 8px; }
     .phone-mockup__screen { border-radius: 22px; }
     .phone-screen {
-        padding: 28px 14px 20px;
-        min-height: 300px;
+        padding: 28px 12px 20px;
+        min-height: 340px;
         gap: 4px;
     }
     .phone-screen__title { font-size: 20px; }
