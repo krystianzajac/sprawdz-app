@@ -133,36 +133,63 @@
                     <div class="phone-mockup__notch"></div>
                     <div class="phone-mockup__screen">
                         <div class="phone-screen">
-                            <div class="phone-screen__icon">
-                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#3373F2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-                                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                                    <line x1="12" y1="19" x2="12" y2="22"/>
-                                </svg>
+                            <div class="phone-screen__statusbar">
+                                <span class="phone-screen__time">17:41</span>
+                                <span class="phone-screen__indicators">
+                                    <svg width="16" height="12" viewBox="0 0 16 12" fill="#1C1C1E"><rect x="0" y="7" width="3" height="5" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13" y="0" width="3" height="12" rx="0.5" opacity="0.3"/></svg>
+                                    <svg width="16" height="12" viewBox="0 0 16 12" fill="#1C1C1E"><path d="M8 2.4C10.6 2.4 12.9 3.5 14.5 5.2L15.4 4.2C13.5 2.2 10.9 1 8 1C5.1 1 2.5 2.2.6 4.2L1.5 5.2C3.1 3.5 5.4 2.4 8 2.4ZM8 5.6C9.7 5.6 11.2 6.3 12.3 7.4L13.2 6.4C11.8 5 9.9 4.2 8 4.2C6.1 4.2 4.2 5 2.8 6.4L3.7 7.4C4.8 6.3 6.3 5.6 8 5.6ZM8 8.8C8.9 8.8 9.7 9.2 10.3 9.7L11.2 8.8C10.3 7.9 9.2 7.4 8 7.4C6.8 7.4 5.7 7.9 4.8 8.8L5.7 9.7C6.3 9.2 7.1 8.8 8 8.8ZM8 12C8.8 12 9.5 11.3 9.5 10.5C9.5 9.7 8.8 9 8 9C7.2 9 6.5 9.7 6.5 10.5C6.5 11.3 7.2 12 8 12Z"/></svg>
+                                    <svg width="27" height="13" viewBox="0 0 27 13" fill="#1C1C1E"><rect x="0" y="1" width="23" height="11" rx="2.5" stroke="#1C1C1E" stroke-width="1" fill="none"/><rect x="24" y="4.5" width="2" height="4" rx="1" opacity="0.4"/><rect x="1.5" y="2.5" width="20" height="8" rx="1.5"/></svg>
+                                </span>
                             </div>
-                            <div class="phone-screen__title" data-pl="Alkosprawdzacz" data-en="Tipsy Tester">Alkosprawdzacz</div>
-                            <div class="phone-screen__subtitle"
-                                 data-pl="Wykrywanie wpływu alkoholu"
-                                 data-en="Voice-based sobriety check">
-                                Wykrywanie wpływu alkoholu
+                            <div class="phone-screen__profile">
+                                <span class="phone-screen__avatar">K</span>
+                                <span class="phone-screen__username">Krystian</span>
                             </div>
-                            <div class="phone-screen__btn"
-                                 data-pl="Rozpocznij test"
-                                 data-en="Start Test">
-                                Rozpocznij test
+                            <div class="phone-screen__body">
+                                <div class="phone-screen__icon">
+                                    <svg width="44" height="44" viewBox="0 0 48 48" fill="none">
+                                        <line x1="12" y1="18" x2="12" y2="30" stroke="#3373F2" stroke-width="2.5" stroke-linecap="round"/>
+                                        <line x1="18" y1="12" x2="18" y2="36" stroke="#3373F2" stroke-width="2.5" stroke-linecap="round"/>
+                                        <line x1="24" y1="8" x2="24" y2="34" stroke="#3373F2" stroke-width="2.5" stroke-linecap="round"/>
+                                        <line x1="30" y1="14" x2="30" y2="36" stroke="#3373F2" stroke-width="2.5" stroke-linecap="round"/>
+                                        <line x1="36" y1="18" x2="36" y2="30" stroke="#3373F2" stroke-width="2.5" stroke-linecap="round"/>
+                                        <circle cx="24" cy="38" r="5" stroke="#3373F2" stroke-width="2" fill="none"/>
+                                        <line x1="24" y1="43" x2="24" y2="46" stroke="#3373F2" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div class="phone-screen__title" data-pl="Alkosprawdzacz" data-en="Tipsy Tester">Alkosprawdzacz</div>
+                                <div class="phone-screen__subtitle"
+                                     data-pl="Wykrywanie stanu nietrzeźwości na podstawie głosu"
+                                     data-en="Voice-based intoxication detection">
+                                    Wykrywanie stanu nietrzeźwości na podstawie głosu
+                                </div>
                             </div>
-                            <div class="phone-screen__gauge">
-                                <svg viewBox="0 0 120 70" class="gauge-svg">
-                                    <path d="M 10 65 A 50 50 0 0 1 110 65" fill="none" stroke="#EBEBED" stroke-width="8" stroke-linecap="round"/>
-                                    <path d="M 10 65 A 50 50 0 0 1 50 18" fill="none" stroke="#33C773" stroke-width="8" stroke-linecap="round" class="gauge-fill"/>
-                                </svg>
-                                <span class="gauge-label">24%</span>
+                            <div class="phone-screen__actions">
+                                <div class="phone-screen__btn phone-screen__btn--primary"
+                                     data-pl="Pełny test"
+                                     data-en="Full Test">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="4" y1="8" x2="4" y2="16"/><line x1="8" y1="5" x2="8" y2="19"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="16" y1="7" x2="16" y2="17"/><line x1="20" y1="10" x2="20" y2="14"/></svg>
+                                    <span data-pl="Pełny test" data-en="Full Test">Pełny test</span>
+                                </div>
+                                <div class="phone-screen__btn phone-screen__btn--secondary"
+                                     data-pl="Tylko głos"
+                                     data-en="Voice Only">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3373F2" stroke-width="2" stroke-linecap="round"><line x1="4" y1="8" x2="4" y2="16"/><line x1="8" y1="5" x2="8" y2="19"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="16" y1="7" x2="16" y2="17"/><line x1="20" y1="10" x2="20" y2="14"/></svg>
+                                    <span data-pl="Tylko głos" data-en="Voice Only">Tylko głos</span>
+                                </div>
+                                <div class="phone-screen__history"
+                                     data-pl="Historia"
+                                     data-en="History">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3373F2" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span data-pl="Historia" data-en="History">Historia</span>
+                                </div>
                             </div>
-                            <div class="phone-screen__result"
-                                 data-pl="Prawdopodobnie trzeźwy"
-                                 data-en="Likely Sober">
-                                Prawdopodobnie trzeźwy
+                            <div class="phone-screen__disclaimer"
+                                 data-pl="Nie do celów prawnych ani bezpieczeństwa. Wersja poglądowa. Inspirowane badaniami naukowymi"
+                                 data-en="Not for legal or safety purposes. Demo version. Inspired by scientific research">
+                                Nie do celów prawnych ani bezpieczeństwa. Wersja poglądowa. Inspirowane badaniami naukowymi
                             </div>
+                            <div class="phone-screen__homebar"></div>
                         </div>
                     </div>
                 </div>
