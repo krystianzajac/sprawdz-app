@@ -42,14 +42,14 @@
         // Update page title
         document.title = lang === 'pl'
             ? 'Alkosprawdzacz — Wykrywanie wpływu alkoholu na podstawie głosu'
-            : 'Alkosprawdzacz — Voice-Based Sobriety Check';
+            : 'Tipsy Tester — Voice-Based Sobriety Check';
 
         // Update meta description
         var metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
             metaDesc.content = lang === 'pl'
                 ? 'Alkosprawdzacz analizuje Twój głos i czas reakcji, by dać Ci orientacyjną ocenę wpływu alkoholu. Inspirowane badaniami naukowymi. Darmowa, prywatna, natychmiastowa.'
-                : 'Alkosprawdzacz analyses your voice and reaction time to give you an indicative assessment of alcohol\'s effects. Inspired by peer-reviewed research. Free, private, instant.';
+                : 'Tipsy Tester analyses your voice and reaction time to give you an indicative assessment of alcohol\'s effects. Inspired by peer-reviewed research. Free, private, instant.';
         }
 
         // Update OG and Twitter meta for social sharing
@@ -59,16 +59,16 @@
         var twDesc = document.querySelector('meta[name="twitter:description"]');
         if (ogTitle) ogTitle.content = lang === 'pl'
             ? 'Alkosprawdzacz — Czy na pewno jesteś trzeźwy?'
-            : 'Alkosprawdzacz — Are you sure you\'re sober?';
+            : 'Tipsy Tester — Are you sure you\'re sober?';
         if (ogDesc) ogDesc.content = lang === 'pl'
             ? 'Twój głos zmienia się, gdy pijesz. Alkosprawdzacz daje orientacyjną ocenę w 30 sekund. Inspirowane badaniami naukowymi.'
-            : 'Your voice changes when you drink. Alkosprawdzacz gives an indicative assessment in 30 seconds. Inspired by peer-reviewed research.';
+            : 'Your voice changes when you drink. Tipsy Tester gives an indicative assessment in 30 seconds. Inspired by peer-reviewed research.';
         if (twTitle) twTitle.content = lang === 'pl'
             ? 'Alkosprawdzacz — Wykrywanie wpływu alkoholu'
-            : 'Alkosprawdzacz — Voice-Based Sobriety Check';
+            : 'Tipsy Tester — Voice-Based Sobriety Check';
         if (twDesc) twDesc.content = lang === 'pl'
             ? 'Twój głos zmienia się, gdy pijesz. Alkosprawdzacz to wykrywa w 30 sekund.'
-            : 'Your voice changes when you drink. Alkosprawdzacz detects it in 30 seconds.';
+            : 'Your voice changes when you drink. Tipsy Tester detects it in 30 seconds.';
     }
 
     // Toggle handler
